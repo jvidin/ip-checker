@@ -8,3 +8,4 @@ ip_checker.log
 /myip_error_log_Windows.csv
 /ip_in_memory.json
 /.gitignore
+/config.py
