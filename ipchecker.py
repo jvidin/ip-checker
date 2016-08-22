@@ -1,4 +1,5 @@
 __author__ = 'jo'
+# python 3.4 version
 
 import datetime
 import dropbox
@@ -13,8 +14,6 @@ import config
 app_key = config.keys['app_key']
 app_secret = config.keys['app_secret']
 token = config.keys['token']
-
-# python 3.4 version
 
 
 def get_logger():

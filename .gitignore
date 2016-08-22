@@ -4,3 +4,6 @@
 __pycache__/
 /config.py
 ip_checker.log
+/myip_Windows.csv
+/myip_error_log_Windows.csv
+/ip_in_memory.json
