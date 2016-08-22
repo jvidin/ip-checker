@@ -1,1 +1,1 @@
-'Dropbox' object has no attribute 'account_info''Dropbox' object has no attribute 'put_file'
+'Dropbox' object has no attribute 'upload''Dropbox' object has no attribute 'put_file'
