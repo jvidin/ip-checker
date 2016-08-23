@@ -70,7 +70,7 @@ def ip_to_dropbox(ip):
         f.write(str(datetime.datetime.now()) + '|' + ip + '|' + platform.python_version() + '|' + platform.system() + '|' + '\n')
         logger.debug('actual ip ->{}'.format(ip))
     try:
-        client = dropbox.client.DropboxClient(token)
+        dbx = dropbox.Dropbox(token)
         dropFile = open('myip_{}.csv'.format(platform.system()), 'rb')
         dropFileResponse = client.put_file('myip_{}.csv'.format(platform.system()), dropFile, overwrite=True)
         logger.debug('uploaded {}'.format(dropFileResponse))
