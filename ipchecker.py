@@ -71,9 +71,12 @@ def ip_to_dropbox(ip):
         logger.debug('actual ip ->{}'.format(ip))
     try:
         dbx = dropbox.Dropbox(token)
-        dropFile = open('myip_{}.csv'.format(platform.system()), 'rb')
-        dropFileResponse = client.put_file('myip_{}.csv'.format(platform.system()), dropFile, overwrite=True)
-        logger.debug('uploaded {}'.format(dropFileResponse))
+        # dropFile = open('myip_{}.csv'.format(platform.system()), 'rb')
+        # dropFileResponse = client.put_file('myip_{}.csv'.format(platform.system()), dropFile, overwrite=True)
+        with open('myip_{}.csv'.format(platform.system()), 'rb') as f:
+            dbx.files_upload(f, ('/myip_{}.csv'.format(platform.system())))
+                             
+        logger.debug('uploaded {}'.format('myip_{}.csv'.format(platform.system())))
 
     except Exception as e:
         with open('myip_error_log_{}.csv'.format(platform.system()), 'a') as ferr:
