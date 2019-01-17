@@ -1,4 +1,4 @@
-__author__ = 'jo'
+__author__ = 'jvidin'
 # python 3.4 version
 
 import datetime
